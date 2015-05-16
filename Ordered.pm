@@ -122,7 +122,7 @@ C<Module::Pluggable> to list the plugins in defined order. It looks for
 a C<_order> method in the modules found using C<Module::Pluggable>, and
 returns the modules sorted numerically in that order. For example:
 
-	my @plugins = __PACKAGE__->plugins();
+	my @plugins = __PACKAGE__->plugins_ordered();
 
 The resulting array of plugins will be sorted. If no C<_order> subroutine
 is defined for a module, an arbitrary default value of 50 is used.
